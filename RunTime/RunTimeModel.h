@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface RunTimeModel : NSObject
-
+#import "ViewController.h"
+@interface RunTimeModel : NSObject<protocaltester>
 
 @property (nonatomic, copy)NSString *name;
 @property (nonatomic, copy)NSString *address;
@@ -17,8 +16,10 @@
 @property (nonatomic,strong)NSArray *arr;
 
 
-- (void)acquireAllProperty;
-- (void)acquireIvarList;
-- (void)acquireMethod;
+- (void)play;
+- (void)eat;
+- (void)drank;
++ (void)palyActios;
+
 
 @end

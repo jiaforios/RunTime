@@ -7,6 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol protocaltester <NSObject>
+
+@required
+- (void)testprptpcalrequared;
+@optional
+- (void)testprptpcaloptional;
+
+@end
 
 @interface ViewController : UIViewController
 
