@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-
+#import "ZJLogManger.h"
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+    
+        [ZJLogManger shareManger];
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

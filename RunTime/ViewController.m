@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "RunTimeModel.h"
 #import "RuntimeManger.h"
+//#import "NSMutableArray+SafeArraySet.h"
+#import "ZJLogTextView.h"
 @interface ViewController ()
 
 @end
@@ -44,7 +46,6 @@
      *  2016-07-01 11:02:16.506 RunTime[5688:2104341] methodName = eat
      2016-07-01 11:02:16.506 RunTime[5688:2104341] methodName = drank
      2016-07-01 11:02:16.506 RunTime[5688:2104341] methodName = privateMethodTest
-     
      2016-07-01 11:02:16.507 RunTime[5688:2104341] methodName = arr
      2016-07-01 11:02:16.508 RunTime[5688:2104341] methodName = setArr:
      2016-07-01 11:02:16.508 RunTime[5688:2104341] methodName = namepath
@@ -63,21 +64,28 @@
     /**
      *  2016-07-01 11:21:01.061 RunTime[5696:2107229] ocProtocalName = protocaltester
       只是获取到该类需要遵守的协议名，并不是该类持有协议
-    
      */
 //    [RuntimeManger acquireProtocalList:models];
- 
     NSLog(@"model.name = %@ ",models.name);
     [RuntimeManger changeIvarValueClass:models andIvar:@"_name" andValue:@"xiaoming"];
     NSLog(@"使用运行时更改值后 model.name = %@",models.name);
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    NSString *石头人= nil;
+    [arr addObject:石头人];
+//    [arr objectAtIndex:10];
+    
+    
+    ZJLogTextView *views = [[ZJLogTextView alloc] initWithFrame:CGRectMake(0, 100,200, 200)];
+    
+    [self.view addSubview:views];
 
     
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 @end

@@ -15,6 +15,10 @@
 		75273F6A1D25182500DB972D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75273F681D25182500DB972D /* LaunchScreen.storyboard */; };
 		75273F731D25184700DB972D /* RunTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75273F721D25184700DB972D /* RunTimeModel.m */; };
 		75273F761D2520AF00DB972D /* RuntimeManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 75273F751D2520AF00DB972D /* RuntimeManger.m */; };
+		7542F9221D34E83F0050FB7A /* ZJLogManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542F9211D34E83F0050FB7A /* ZJLogManger.m */; };
+		7542F9261D34EF310050FB7A /* GetLogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542F9251D34EF310050FB7A /* GetLogFile.m */; };
+		7542F9291D34FF410050FB7A /* ZJLogTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542F9281D34FF410050FB7A /* ZJLogTextView.m */; };
+		7554033E1D3330780040EB18 /* NSMutableArray+SafeArraySet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7554033D1D3330780040EB18 /* NSMutableArray+SafeArraySet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,15 @@
 		75273F721D25184700DB972D /* RunTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeModel.m; sourceTree = "<group>"; };
 		75273F741D2520AF00DB972D /* RuntimeManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeManger.h; sourceTree = "<group>"; };
 		75273F751D2520AF00DB972D /* RuntimeManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeManger.m; sourceTree = "<group>"; };
+		7542F91F1D34D1060050FB7A /* runtime.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runtime.pch; sourceTree = "<group>"; };
+		7542F9201D34E83F0050FB7A /* ZJLogManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJLogManger.h; sourceTree = "<group>"; };
+		7542F9211D34E83F0050FB7A /* ZJLogManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJLogManger.m; sourceTree = "<group>"; };
+		7542F9241D34EF310050FB7A /* GetLogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLogFile.h; sourceTree = "<group>"; };
+		7542F9251D34EF310050FB7A /* GetLogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLogFile.m; sourceTree = "<group>"; };
+		7542F9271D34FF410050FB7A /* ZJLogTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJLogTextView.h; sourceTree = "<group>"; };
+		7542F9281D34FF410050FB7A /* ZJLogTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJLogTextView.m; sourceTree = "<group>"; };
+		7554033C1D3330780040EB18 /* NSMutableArray+SafeArraySet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeArraySet.h"; sourceTree = "<group>"; };
+		7554033D1D3330780040EB18 /* NSMutableArray+SafeArraySet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeArraySet.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +79,16 @@
 			children = (
 				75273F5D1D25182500DB972D /* AppDelegate.h */,
 				75273F5E1D25182500DB972D /* AppDelegate.m */,
+				7542F9231D34EF190050FB7A /* LogFile */,
+				7542F91F1D34D1060050FB7A /* runtime.pch */,
 				75273F601D25182500DB972D /* ViewController.h */,
 				75273F611D25182500DB972D /* ViewController.m */,
 				75273F711D25184700DB972D /* RunTimeModel.h */,
 				75273F721D25184700DB972D /* RunTimeModel.m */,
 				75273F741D2520AF00DB972D /* RuntimeManger.h */,
 				75273F751D2520AF00DB972D /* RuntimeManger.m */,
+				7554033C1D3330780040EB18 /* NSMutableArray+SafeArraySet.h */,
+				7554033D1D3330780040EB18 /* NSMutableArray+SafeArraySet.m */,
 				75273F631D25182500DB972D /* Main.storyboard */,
 				75273F661D25182500DB972D /* Assets.xcassets */,
 				75273F681D25182500DB972D /* LaunchScreen.storyboard */,
@@ -87,6 +104,19 @@
 				75273F5B1D25182500DB972D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7542F9231D34EF190050FB7A /* LogFile */ = {
+			isa = PBXGroup;
+			children = (
+				7542F9201D34E83F0050FB7A /* ZJLogManger.h */,
+				7542F9211D34E83F0050FB7A /* ZJLogManger.m */,
+				7542F9241D34EF310050FB7A /* GetLogFile.h */,
+				7542F9251D34EF310050FB7A /* GetLogFile.m */,
+				7542F9271D34FF410050FB7A /* ZJLogTextView.h */,
+				7542F9281D34FF410050FB7A /* ZJLogTextView.m */,
+			);
+			name = LogFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7542F9291D34FF410050FB7A /* ZJLogTextView.m in Sources */,
 				75273F621D25182500DB972D /* ViewController.m in Sources */,
+				7542F9261D34EF310050FB7A /* GetLogFile.m in Sources */,
 				75273F5F1D25182500DB972D /* AppDelegate.m in Sources */,
 				75273F731D25184700DB972D /* RunTimeModel.m in Sources */,
+				7542F9221D34E83F0050FB7A /* ZJLogManger.m in Sources */,
+				7554033E1D3330780040EB18 /* NSMutableArray+SafeArraySet.m in Sources */,
 				75273F5C1D25182500DB972D /* main.m in Sources */,
 				75273F761D2520AF00DB972D /* RuntimeManger.m in Sources */,
 			);
@@ -275,10 +309,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RunTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zengjia.RunTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunTime/CocoaLumberjack/Classes/RunTime-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -286,10 +324,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RunTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zengjia.RunTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunTime/CocoaLumberjack/Classes/RunTime-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -312,6 +353,7 @@
 				75273F701D25182500DB972D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
