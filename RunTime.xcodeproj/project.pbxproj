@@ -19,6 +19,8 @@
 		7542F9261D34EF310050FB7A /* GetLogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542F9251D34EF310050FB7A /* GetLogFile.m */; };
 		7542F9291D34FF410050FB7A /* ZJLogTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542F9281D34FF410050FB7A /* ZJLogTextView.m */; };
 		7554033E1D3330780040EB18 /* NSMutableArray+SafeArraySet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7554033D1D3330780040EB18 /* NSMutableArray+SafeArraySet.m */; };
+		75635E6D1D35E4E600F4D457 /* NSObject+XWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 75635E6C1D35E4E600F4D457 /* NSObject+XWAdd.m */; };
+		75635E701D360BEA00F4D457 /* MarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75635E6F1D360BEA00F4D457 /* MarkView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,10 @@
 		7542F9281D34FF410050FB7A /* ZJLogTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJLogTextView.m; sourceTree = "<group>"; };
 		7554033C1D3330780040EB18 /* NSMutableArray+SafeArraySet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeArraySet.h"; sourceTree = "<group>"; };
 		7554033D1D3330780040EB18 /* NSMutableArray+SafeArraySet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeArraySet.m"; sourceTree = "<group>"; };
+		75635E6B1D35E4E600F4D457 /* NSObject+XWAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XWAdd.h"; sourceTree = "<group>"; };
+		75635E6C1D35E4E600F4D457 /* NSObject+XWAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XWAdd.m"; sourceTree = "<group>"; };
+		75635E6E1D360BE300F4D457 /* MarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkView.h; sourceTree = "<group>"; };
+		75635E6F1D360BEA00F4D457 /* MarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 				75273F5E1D25182500DB972D /* AppDelegate.m */,
 				7542F9231D34EF190050FB7A /* LogFile */,
 				7542F91F1D34D1060050FB7A /* runtime.pch */,
+				75635E6E1D360BE300F4D457 /* MarkView.h */,
+				75635E6F1D360BEA00F4D457 /* MarkView.m */,
 				75273F601D25182500DB972D /* ViewController.h */,
 				75273F611D25182500DB972D /* ViewController.m */,
 				75273F711D25184700DB972D /* RunTimeModel.h */,
@@ -115,6 +123,8 @@
 				7542F9251D34EF310050FB7A /* GetLogFile.m */,
 				7542F9271D34FF410050FB7A /* ZJLogTextView.h */,
 				7542F9281D34FF410050FB7A /* ZJLogTextView.m */,
+				75635E6B1D35E4E600F4D457 /* NSObject+XWAdd.h */,
+				75635E6C1D35E4E600F4D457 /* NSObject+XWAdd.m */,
 			);
 			name = LogFile;
 			sourceTree = "<group>";
@@ -193,10 +203,12 @@
 				75273F621D25182500DB972D /* ViewController.m in Sources */,
 				7542F9261D34EF310050FB7A /* GetLogFile.m in Sources */,
 				75273F5F1D25182500DB972D /* AppDelegate.m in Sources */,
+				75635E6D1D35E4E600F4D457 /* NSObject+XWAdd.m in Sources */,
 				75273F731D25184700DB972D /* RunTimeModel.m in Sources */,
 				7542F9221D34E83F0050FB7A /* ZJLogManger.m in Sources */,
 				7554033E1D3330780040EB18 /* NSMutableArray+SafeArraySet.m in Sources */,
 				75273F5C1D25182500DB972D /* main.m in Sources */,
+				75635E701D360BEA00F4D457 /* MarkView.m in Sources */,
 				75273F761D2520AF00DB972D /* RuntimeManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +275,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "a5ddda7b-9c12-426b-97ae-0a61a4a1b4c3";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -300,6 +313,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "a5ddda7b-9c12-426b-97ae-0a61a4a1b4c3";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -310,13 +324,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hang Chen (WE5GH4JWM6)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RunTime/runtime.pch";
 				INFOPLIST_FILE = RunTime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zengjia.RunTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ddda7b-9c12-426b-97ae-0a61a4a1b4c3";
 				SWIFT_OBJC_BRIDGING_HEADER = "RunTime/CocoaLumberjack/Classes/RunTime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -325,11 +344,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RunTime/runtime.pch";
 				INFOPLIST_FILE = RunTime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zengjia.RunTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ddda7b-9c12-426b-97ae-0a61a4a1b4c3";
 				SWIFT_OBJC_BRIDGING_HEADER = "RunTime/CocoaLumberjack/Classes/RunTime-Bridging-Header.h";
 			};
 			name = Release;

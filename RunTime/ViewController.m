@@ -11,6 +11,7 @@
 #import "RuntimeManger.h"
 //#import "NSMutableArray+SafeArraySet.h"
 #import "ZJLogTextView.h"
+#import "GetLogFile.h"
 @interface ViewController ()
 
 @end
@@ -70,18 +71,35 @@
     [RuntimeManger changeIvarValueClass:models andIvar:@"_name" andValue:@"xiaoming"];
     NSLog(@"使用运行时更改值后 model.name = %@",models.name);
     NSMutableArray *arr = [[NSMutableArray alloc] init];
-    NSString *石头人= nil;
-    [arr addObject:石头人];
 //    [arr objectAtIndex:10];
-    
-    
-    ZJLogTextView *views = [[ZJLogTextView alloc] initWithFrame:CGRectMake(0, 100,200, 200)];
-    
-    [self.view addSubview:views];
 
+//    
+//    ZJLogTextView *views = [[ZJLogTextView alloc] initWithFrame:CGRectMake(0, 100,300, 400)];
+//    
+//    [self.view addSubview:views];
+
+    
+    [ZJLogTextView shareManger];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        while (1) {
+//            NSLog(@"11111");
+//            usleep(40*1000);
+//        }
+ 
+    });
+    
+    
+    
+    
     
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"aaa");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

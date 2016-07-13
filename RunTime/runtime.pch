@@ -12,6 +12,24 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#define XCODE_COLORS_ESCAPE @"\033(Color**Log)"
+
+#define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
+#define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
+#define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
+
+#define LogBlue(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg30,144,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogRed(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg220,20,60;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+
+
+// nslog 宏处理
+#define AWLog(fmt, ...)  NSLog(fmt, ##__VA_ARGS__)
+#define NSLog(format, ...) do {                                             \
+         fprintf(stderr, "<%s : %d> %s\n",                                       \
+         [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+        __LINE__, __func__);                                                         \
+        (NSLog)((format), ##__VA_ARGS__);                                           \
+} while (0)
 
 
 #endif /* runtime_pch */

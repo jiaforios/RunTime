@@ -10,4 +10,5 @@
 
 @interface ZJLogTextView : UIView
 
++ (id)shareManger;
 @end

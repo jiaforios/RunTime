@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface GetLogFile : NSObject
-- (void)getLogFileData;
+@property(nonatomic,assign)int changeValue;
+
+- (void)getLogFileData:(void(^)(NSString *logDataStr,NSString *filepath))logBlock;
+
 @end

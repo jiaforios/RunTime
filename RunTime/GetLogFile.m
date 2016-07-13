@@ -7,12 +7,10 @@
 //
 
 #import "GetLogFile.h"
-
+#import "NSObject+XWAdd.h"
 @implementation GetLogFile
 
-
-
-- (void)getLogFileData
+- (void)getLogFileData:(void (^)(NSString *,NSString *))logBlock
 {
     
     NSString *Path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
@@ -20,10 +18,7 @@
     
    if([[NSFileManager defaultManager] fileExistsAtPath:logPath])
    {
-       NSLog(@"文件存在");
-       NSArray *arr = nil;
-//      arr =  [[NSFileManager defaultManager] subpathsAtPath:logPath];
-       
+       NSArray *arr = nil;       
      arr =  [[NSFileManager defaultManager] contentsOfDirectoryAtPath:logPath error:nil];
        
        
@@ -31,10 +26,15 @@
        return [obj1 compare:obj2];
     }];
      
-       NSData *data = [NSData dataWithContentsOfFile:[logPath stringByAppendingPathComponent:arr[0]]];
+       NSString *filepath = [logPath stringByAppendingPathComponent:[arr lastObject]];
+       
+       NSData *data = [NSData dataWithContentsOfFile:filepath];
        
        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-       NSLog(@"====arb=  %@ ========",str);
+       
+       if (logBlock) {
+           logBlock(str,filepath);
+       }
  
    }
     
