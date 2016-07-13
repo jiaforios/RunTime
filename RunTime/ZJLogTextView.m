@@ -22,6 +22,8 @@
 @property(nonatomic, copy) NSString *logPath;
 @property(nonatomic, strong)NSTimer *timer;
 @property(nonatomic, assign)BOOL bDrag;
+@property(nonatomic, assign)CGRect customFrame;
+
 @end
 
 @implementation ZJLogTextView
@@ -30,11 +32,12 @@
 + (id)shareManger
 {
     static ZJLogTextView *manger = nil;
-    
+
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        manger = [[ZJLogTextView alloc] initWithFrame:CGRectMake(50, 20, 200, 300)];
+        manger = [[ZJLogTextView alloc] initWithFrame:CGRectMake(50, 20, 320, 400)];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
 
             [[UIApplication sharedApplication].keyWindow addSubview:manger];
@@ -48,7 +51,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        
+        _customFrame = frame;
         _bDrag = NO;
         self.backgroundColor = [UIColor blackColor];
         [self.controlView addSubview:self.cancelBtn];
@@ -119,8 +122,10 @@
         _logTextView.backgroundColor = [UIColor blackColor];
         
     }
+//    _logTextView.userInteractionEnabled = NO; // 不能编辑 不能交互
+    _logTextView.editable = NO;  // 不能编辑 能交互
     _logTextView.delegate = self;
-    
+    _logTextView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     
     return _logTextView;
 }
@@ -137,7 +142,7 @@
     CGFloat offsety = currentPoint.y - prePoint.y;
 
     self.center = CGPointMake(self.center.x+offsetx, self.center.y+offsety);
-    
+    _customFrame = self.frame;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
@@ -218,13 +223,14 @@
     NSLog(@"big");
     // 恢复定时器
     [_timer setFireDate:[NSDate date]];
+    self.frame = _customFrame;
+    
 }
 - (void)smallLogViewShow:(UIButton *)sender
 {
     // 最小化时 暂停计时器 降低CPU
     [_timer setFireDate:[NSDate distantFuture]];
-    
-//    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 50);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, BUTTON_HIGHT *3, BUTTON_HIGHT);
 
     NSLog(@"small");
 }
