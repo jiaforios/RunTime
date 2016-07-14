@@ -7,7 +7,6 @@
 //
 
 #import "GetLogFile.h"
-#import "NSObject+XWAdd.h"
 @implementation GetLogFile
 
 - (void)getLogFileData:(void (^)(NSString *,NSString *))logBlock

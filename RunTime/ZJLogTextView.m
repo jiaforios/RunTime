@@ -167,6 +167,7 @@
         _controlView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), BUTTON_HIGHT)];
     }
     _controlView.backgroundColor = [UIColor lightGrayColor];
+    _controlView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleWidth;
     return _controlView;
     
 }
@@ -177,7 +178,7 @@
         _smallBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _smallBtn.frame = CGRectMake(CGRectGetMaxX(_bigBtn.frame), 0, BUTTON_HIGHT, BUTTON_HIGHT);
     }
-    _smallBtn.backgroundColor = [UIColor redColor];
+    [_smallBtn setImage:[UIImage imageNamed:@"LogImageSource.bundle/small.jpg"] forState:UIControlStateNormal];
     [_smallBtn addTarget:self action:@selector(smallLogViewShow:) forControlEvents:UIControlEventTouchUpInside];
 
     return _smallBtn;
@@ -189,7 +190,7 @@
         _bigBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _bigBtn.frame = CGRectMake(CGRectGetMaxX(_cancelBtn.frame), 0, BUTTON_HIGHT, BUTTON_HIGHT);
     }
-    _bigBtn.backgroundColor =[UIColor blueColor];
+    [_bigBtn setImage:[UIImage imageNamed:@"LogImageSource.bundle/big"] forState:UIControlStateNormal];
     [_bigBtn addTarget:self action:@selector(bigLogViewShow:) forControlEvents:UIControlEventTouchUpInside];
 
     return _bigBtn;
@@ -201,8 +202,7 @@
         _cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _cancelBtn.frame = CGRectMake(0, 0, BUTTON_HIGHT, BUTTON_HIGHT);
     }
-    _cancelBtn.backgroundColor = [UIColor yellowColor];
-    
+    [_cancelBtn setImage:[UIImage imageNamed:@"LogImageSource.bundle/close.jpg"] forState:UIControlStateNormal];
     [_cancelBtn addTarget:self action:@selector(cancelLogViewShow:) forControlEvents:UIControlEventTouchUpInside];
     
     return _cancelBtn;
@@ -223,6 +223,7 @@
     NSLog(@"big");
     // 恢复定时器
     [_timer setFireDate:[NSDate date]];
+    
     self.frame = _customFrame;
     
 }

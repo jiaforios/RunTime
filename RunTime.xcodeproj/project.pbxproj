@@ -19,8 +19,8 @@
 		7542F9261D34EF310050FB7A /* GetLogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542F9251D34EF310050FB7A /* GetLogFile.m */; };
 		7542F9291D34FF410050FB7A /* ZJLogTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7542F9281D34FF410050FB7A /* ZJLogTextView.m */; };
 		7554033E1D3330780040EB18 /* NSMutableArray+SafeArraySet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7554033D1D3330780040EB18 /* NSMutableArray+SafeArraySet.m */; };
-		75635E6D1D35E4E600F4D457 /* NSObject+XWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 75635E6C1D35E4E600F4D457 /* NSObject+XWAdd.m */; };
 		75635E701D360BEA00F4D457 /* MarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75635E6F1D360BEA00F4D457 /* MarkView.m */; };
+		75EEE2581D37275400B8B9E7 /* LogImageSource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75EEE2571D37275400B8B9E7 /* LogImageSource.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +47,9 @@
 		7542F9281D34FF410050FB7A /* ZJLogTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJLogTextView.m; sourceTree = "<group>"; };
 		7554033C1D3330780040EB18 /* NSMutableArray+SafeArraySet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeArraySet.h"; sourceTree = "<group>"; };
 		7554033D1D3330780040EB18 /* NSMutableArray+SafeArraySet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeArraySet.m"; sourceTree = "<group>"; };
-		75635E6B1D35E4E600F4D457 /* NSObject+XWAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XWAdd.h"; sourceTree = "<group>"; };
-		75635E6C1D35E4E600F4D457 /* NSObject+XWAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XWAdd.m"; sourceTree = "<group>"; };
 		75635E6E1D360BE300F4D457 /* MarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkView.h; sourceTree = "<group>"; };
 		75635E6F1D360BEA00F4D457 /* MarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkView.m; sourceTree = "<group>"; };
+		75EEE2571D37275400B8B9E7 /* LogImageSource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LogImageSource.bundle; path = ../LogImageSource.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +122,7 @@
 				7542F9251D34EF310050FB7A /* GetLogFile.m */,
 				7542F9271D34FF410050FB7A /* ZJLogTextView.h */,
 				7542F9281D34FF410050FB7A /* ZJLogTextView.m */,
-				75635E6B1D35E4E600F4D457 /* NSObject+XWAdd.h */,
-				75635E6C1D35E4E600F4D457 /* NSObject+XWAdd.m */,
+				75EEE2571D37275400B8B9E7 /* LogImageSource.bundle */,
 			);
 			name = LogFile;
 			sourceTree = "<group>";
@@ -188,6 +186,7 @@
 			files = (
 				75273F6A1D25182500DB972D /* LaunchScreen.storyboard in Resources */,
 				75273F671D25182500DB972D /* Assets.xcassets in Resources */,
+				75EEE2581D37275400B8B9E7 /* LogImageSource.bundle in Resources */,
 				75273F651D25182500DB972D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +202,6 @@
 				75273F621D25182500DB972D /* ViewController.m in Sources */,
 				7542F9261D34EF310050FB7A /* GetLogFile.m in Sources */,
 				75273F5F1D25182500DB972D /* AppDelegate.m in Sources */,
-				75635E6D1D35E4E600F4D457 /* NSObject+XWAdd.m in Sources */,
 				75273F731D25184700DB972D /* RunTimeModel.m in Sources */,
 				7542F9221D34E83F0050FB7A /* ZJLogManger.m in Sources */,
 				7554033E1D3330780040EB18 /* NSMutableArray+SafeArraySet.m in Sources */,
